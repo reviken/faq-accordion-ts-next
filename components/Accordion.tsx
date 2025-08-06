@@ -45,7 +45,7 @@ export default function Accordion({
             key={i}
             className="flex flex-col gap-300 pb-300 pt-300 border-b-[1px] last:border-b-0 border-purple-100"
           >
-            <div className="flex" role="heading" aria-level={3}>
+            <div className="flex" role="heading" aria-level={2}>
               <button
                 className="flex w-full justify-between items-center text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 hover:cursor-pointer"
                 onClick={() => toggleAccordion(question)}
