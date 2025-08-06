@@ -19,23 +19,23 @@ export default function Accordion({
   questionsAnswers,
   className,
 }: AccordionProps) {
-  const [expanded, setExpanded] = useState<string | undefined>(undefined);
+  const [expanded, setExpanded] = useState<number | undefined>(0);
 
-  function toggleAccordion(question: string) {
-    setExpanded((x) => (x === question ? undefined : question));
+  function toggleAccordion(index: number) {
+    setExpanded((x) => (x === index ? undefined : index));
   }
 
-  function handleKeyDown(e: KeyboardEvent, question: string) {
+  function handleKeyDown(e: KeyboardEvent, index: number) {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      toggleAccordion(question);
+      toggleAccordion(index);
     }
   }
 
   return (
     <div className={`flex flex-col ${className}`} role="presentation">
       {questionsAnswers.map(({ question, answer }, i) => {
-        const isExpanded = question === expanded;
+        const isExpanded = i === expanded;
         const icon = isExpanded ? minusIcon : plusIcon;
         const answerId = `answer-${i}`;
         const answerStyle = isExpanded ? "" : "hidden";
@@ -48,8 +48,8 @@ export default function Accordion({
             <div className="flex" role="heading" aria-level={2}>
               <button
                 className="flex w-full justify-between items-center text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 hover:cursor-pointer"
-                onClick={() => toggleAccordion(question)}
-                onKeyDown={(e) => handleKeyDown(e, question)}
+                onClick={() => toggleAccordion(i)}
+                onKeyDown={(e) => handleKeyDown(e, i)}
                 aria-expanded={isExpanded}
                 aria-controls={answerId}
               >

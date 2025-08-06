@@ -27,4 +27,4 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/reviken/faq-accordion-ts-next](https://github.com/reviken/faq-accordion-ts-next)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://faq-accordion-ts-next-ctqsl9fzv.vercel.app](https://faq-accordion-ts-next-ctqsl9fzv.vercel.app)
