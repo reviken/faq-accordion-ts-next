@@ -47,7 +47,7 @@ export default function Accordion({
           >
             <div className="flex" role="heading" aria-level={3}>
               <button
-                className="flex w-full justify-between items-center text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-600"
+                className="flex w-full justify-between items-center text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-600 hover:cursor-pointer"
                 onClick={() => toggleAccordion(question)}
                 onKeyDown={(e) => handleKeyDown(e, question)}
                 aria-expanded={isExpanded}
