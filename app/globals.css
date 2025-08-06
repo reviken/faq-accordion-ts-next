@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+    --*: initial;
+    --spacing: 0.08px;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-purple-950: #301534;
+    --color-purple-600: #8b6990;
+    --color-purple-100: #f8eeff;
+    --color-violet-600: #ad28eb;
+}
+
+@layer utilities {
+    .text-preset-1 {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 1.17857143;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-2 {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.16666667;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-3 {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5;
+        letter-spacing: 0px;
+    }
+}
